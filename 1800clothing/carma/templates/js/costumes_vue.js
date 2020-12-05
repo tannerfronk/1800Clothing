@@ -58,7 +58,7 @@ const carma_app = new Vue({
                 this.page = 1;
                 this.costumes = [];
                 this.pages = [];
-                this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/yearsearch/' + year_from + '/' + year_to;
+                this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/yearssearch/' + year_from + '/' + year_to;
                 this.getCostumes();
             }
             this.year_from = year_from;
