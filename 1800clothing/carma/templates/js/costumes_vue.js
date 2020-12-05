@@ -58,7 +58,7 @@ const carma_app = new Vue({
                 this.page = 1;
                 this.costumes = [];
                 this.pages = [];
-                this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/' + year_from + '/' + year_to;
+                this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/yearssearch/' + year_from + '/' + year_to;
                 this.getCostumes();
             }
             this.year_from = year_from;
@@ -114,13 +114,13 @@ const carma_app = new Vue({
     created() {
         if(localStorage.getItem('year') !== null){
             let year = localStorage.getItem('year');
-            this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/' + year;
+            this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/search/' + year;
             localStorage.clear();
         }
         else if(localStorage.getItem('year_from') !== null){
             let year_from = localStorage.getItem('year_from');
             let year_to = localStorage.getItem('year_to');
-            this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/' + year_from + '/' + year_to;
+            this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/yearssearch/' + year_from + '/' + year_to;
             localStorage.clear();
         }
         this.getCostumes();
