@@ -11,7 +11,7 @@ const carma_app = new Vue({
     el: '#carma-app',
     data: {
         costumes: [],
-        baseUrl: 'https://node-1800-clothing.herokuapp.com/api/',
+        baseUrl: 'https://node-1800-clothing.herokuapp.com/api/costumes',
         page: 1,
         perPage: 500,
         pages: [],
@@ -70,7 +70,7 @@ const carma_app = new Vue({
             this.page = 1;
             this.costumes = [];
             this.pages = [];
-            this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/';
+            this.baseUrl = 'https://node-1800-clothing.herokuapp.com/api/costumes';
             this.getCostumes();
         },
         
